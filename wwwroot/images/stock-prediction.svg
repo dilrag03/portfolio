@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Stock prediction dashboard</title>
+  <desc id="desc">A dark analytics dashboard with rising market line charts and KPI cards.</desc>
+  <rect width="960" height="600" fill="#111418"/>
+  <rect x="80" y="72" width="800" height="456" rx="28" fill="#1b2027" stroke="#2d3743" stroke-width="2"/>
+  <rect x="116" y="110" width="184" height="86" rx="18" fill="#122c2a"/>
+  <rect x="326" y="110" width="184" height="86" rx="18" fill="#2a2117"/>
+  <rect x="536" y="110" width="184" height="86" rx="18" fill="#1d2831"/>
+  <text x="140" y="145" fill="#a9b4c0" font-family="Segoe UI, Arial" font-size="22">Forecast</text>
+  <text x="140" y="176" fill="#12b8a6" font-family="Segoe UI, Arial" font-size="34" font-weight="700">+18.4%</text>
+  <text x="350" y="145" fill="#a9b4c0" font-family="Segoe UI, Arial" font-size="22">Volatility</text>
+  <text x="350" y="176" fill="#f59e42" font-family="Segoe UI, Arial" font-size="34" font-weight="700">Low</text>
+  <text x="560" y="145" fill="#a9b4c0" font-family="Segoe UI, Arial" font-size="22">Signal</text>
+  <text x="560" y="176" fill="#e2e8f0" font-family="Segoe UI, Arial" font-size="34" font-weight="700">Buy</text>
+  <path d="M134 438 L230 390 L328 414 L424 330 L522 352 L620 260 L728 286 L820 208" fill="none" stroke="#12b8a6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M134 466 L230 448 L328 430 L424 406 L522 380 L620 336 L728 308 L820 278" fill="none" stroke="#f59e42" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+  <g stroke="#2d3743" stroke-width="2">
+    <line x1="132" y1="236" x2="828" y2="236"/>
+    <line x1="132" y1="306" x2="828" y2="306"/>
+    <line x1="132" y1="376" x2="828" y2="376"/>
+    <line x1="132" y1="446" x2="828" y2="446"/>
+  </g>
+</svg>

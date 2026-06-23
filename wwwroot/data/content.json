@@ -1,0 +1,86 @@
+{
+  "about": {
+    "name": "Dilrag Madhuresh V",
+    "title": "Software Developer | MCA (AI/ML) Student",
+    "bio": "I am an MCA (AI/ML) student and aspiring Software Developer with practical experience in Data Science, Machine Learning, Full Stack Development, and Data Analytics. I enjoy turning ideas into practical products, from predictive models and dashboards to responsive web applications with clean user experiences.",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "C# / ASP.NET Core",
+      "JavaScript",
+      "Data Analytics",
+      "SQL",
+      "Full Stack Development"
+    ],
+    "email": "mvdilrag@gmail.com",
+    "phone": "+91 9633754349",
+    "location": "Kochi, Kerala, India",
+    "picture": "images/my-image.jpeg",
+    "social": {
+      "github": "https://github.com/dilrag03",
+      "linkedin": "https://linkedin.com/in/dilrag-madhuresh-v",
+      "twitter": ""
+    }
+  },
+  "projects": [
+    {
+      "title": "Stock Market Prediction ML Model",
+      "description": "A machine learning workflow that studies historical market trends, engineers useful indicators, and predicts likely stock price movement patterns.",
+      "tags": ["Python", "Machine Learning", "Data Analysis"],
+      "imageUrl": "images/stock-prediction.svg",
+      "githubUrl": "https://github.com/dilrag03",
+      "demoUrl": "",
+      "details": "This project focuses on transforming raw historical stock data into meaningful forecasting signals. It includes data cleaning, exploratory analysis, feature engineering with price and trend indicators, model training, evaluation, and result interpretation. The goal is not just to predict a number, but to understand which market patterns influence the model and present those insights in a way that can support smarter analysis."
+    },
+    {
+      "title": "Aura - Behavioral Stress Analyzer",
+      "description": "A Java-based behavioral analysis system that studies typing rhythm, pauses, and keystroke patterns to estimate user stress signals.",
+      "tags": ["Java", "Behavioral Analytics"],
+      "imageUrl": "images/aura-stress.svg",
+      "githubUrl": "https://github.com/dilrag03",
+      "demoUrl": "",
+      "details": "Aura explores how subtle keyboard behavior can reveal changes in user stress and focus. The system captures typing cadence, key hold time, delays between keystrokes, and rhythm variation, then analyzes those patterns to estimate stress levels. It is designed as a diagnostic-style tool with real-time processing, structured behavioral metrics, and a practical interface for reviewing stress indicators."
+    },
+    {
+      "title": "Hemalink & DropOfLife - Blood Bank Platforms",
+      "description": "Full-stack blood bank platforms that connect donors, recipients, and inventory workflows through a more organized digital experience.",
+      "tags": ["Full Stack", "Database", "ASP.NET"],
+      "imageUrl": "images/blood-bank.svg",
+      "githubUrl": "https://github.com/dilrag03",
+      "demoUrl": "",
+      "details": "Hemalink and DropOfLife are designed to simplify blood donation coordination by bringing donor registration, recipient requests, blood group availability, and inventory tracking into one workflow. The platform supports donor-recipient matching, stock visibility, request management, and operational dashboards so blood bank teams can respond faster and reduce manual coordination."
+    },
+    {
+      "title": "You&Me - E-Commerce Fashion Website",
+      "description": "A responsive fashion e-commerce website with product browsing, cart interactions, filtering, and a clean shopping experience.",
+      "tags": ["HTML", "CSS", "JavaScript", "MongoDB"],
+      "imageUrl": "images/ecommerce-fashion.svg",
+      "githubUrl": "https://github.com/dilrag03",
+      "demoUrl": "",
+      "details": "You&Me is a fashion-focused e-commerce project built around a smooth customer journey. It includes a product catalog, category filtering, shopping cart behavior, responsive layouts, and backend-ready product and order management concepts. The design emphasizes easy browsing, clear product presentation, and a mobile-friendly experience for shoppers."
+    },
+    {
+      "title": "Ball Sorting Game",
+      "description": "An interactive logic puzzle game where players sort colored balls into matching tubes using rule-based moves.",
+      "tags": ["Python", "Game Development"],
+      "imageUrl": "images/ball-sorting.svg",
+      "githubUrl": "https://github.com/dilrag03",
+      "demoUrl": "",
+      "details": "The Ball Sorting Game applies algorithmic thinking to a playable puzzle experience. Players move colored balls between tubes while following sorting rules, working toward a solved state where each tube contains matching colors. The project includes game-state handling, move validation, intuitive controls, and progressively challenging puzzle arrangements that make it both fun and logic-driven."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computer Applications (AI/ML)",
+      "institution": "Jain University",
+      "year": "2025 - Present",
+      "description": "Specialization in Artificial Intelligence & Machine Learning. Focus areas: ML, AI, Data Analytics, and Software Development."
+    },
+    {
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "institution": "Acharya Institute of Graduate Studies",
+      "year": "2021 - 2024",
+      "description": "Undergraduate studies in computer applications and software engineering fundamentals."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Fashion ecommerce website</title>
+  <desc id="desc">A responsive fashion shop interface with product cards and cart panel.</desc>
+  <rect width="960" height="600" fill="#111418"/>
+  <rect x="102" y="76" width="756" height="448" rx="28" fill="#f7f2ea"/>
+  <rect x="144" y="126" width="254" height="330" rx="22" fill="#1b2027"/>
+  <path d="M230 176 L270 148 L310 176 L332 300 H208Z" fill="#12b8a6"/>
+  <rect x="442" y="128" width="296" height="42" rx="21" fill="#111418"/>
+  <rect x="442" y="212" width="132" height="170" rx="18" fill="#f59e42"/>
+  <rect x="606" y="212" width="132" height="170" rx="18" fill="#12b8a6"/>
+  <rect x="442" y="410" width="296" height="34" rx="17" fill="#111418" opacity=".85"/>
+  <circle cx="788" cy="148" r="30" fill="#ef4444"/>
+  <text x="482" y="155" fill="#f7f2ea" font-family="Segoe UI, Arial" font-size="22" font-weight="700">You&Me</text>
+</svg>

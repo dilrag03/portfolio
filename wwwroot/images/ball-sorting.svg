@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ball sorting game</title>
+  <desc id="desc">Colorful balls arranged inside puzzle tubes for a ball sorting game.</desc>
+  <rect width="960" height="600" fill="#101214"/>
+  <g fill="none" stroke="#a9b4c0" stroke-width="12" stroke-linecap="round">
+    <path d="M244 150 V430 Q244 490 304 490 Q364 490 364 430 V150"/>
+    <path d="M420 150 V430 Q420 490 480 490 Q540 490 540 430 V150"/>
+    <path d="M596 150 V430 Q596 490 656 490 Q716 490 716 430 V150"/>
+  </g>
+  <g>
+    <circle cx="304" cy="420" r="38" fill="#12b8a6"/><circle cx="304" cy="340" r="38" fill="#f59e42"/><circle cx="304" cy="260" r="38" fill="#ef4444"/>
+    <circle cx="480" cy="420" r="38" fill="#ef4444"/><circle cx="480" cy="340" r="38" fill="#12b8a6"/><circle cx="480" cy="260" r="38" fill="#f59e42"/>
+    <circle cx="656" cy="420" r="38" fill="#f59e42"/><circle cx="656" cy="340" r="38" fill="#ef4444"/><circle cx="656" cy="260" r="38" fill="#12b8a6"/>
+  </g>
+  <text x="480" y="102" fill="#f1f5f9" font-family="Segoe UI, Arial" font-size="38" font-weight="800" text-anchor="middle">Ball Sorting Game</text>
+</svg>

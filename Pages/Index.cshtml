@@ -1,0 +1,205 @@
+@page
+@model portfolio.Pages.IndexModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.About.Name;
+}
+
+<section id="hero" class="hero">
+    <div class="container hero-inner">
+        <p class="hero-greeting slide-in-left">Hello, I'm</p>
+        <h1 class="hero-name slide-in-up">@Model.About.Name</h1>
+        <p class="hero-title">
+            <span id="typed-text" data-phrases="@string.Join("|", Model.About.Skills.Take(6))"></span>
+            <span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-subtitle slide-in-up delay-2">@Model.About.Title</p>
+        <div class="hero-actions slide-in-up delay-3">
+            <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
+            <a class="btn btn-outline-light btn-lg" href="#contact">Get In Touch</a>
+        </div>
+        <div id="profile-data" class="d-none"
+             data-email="@Model.About.Email"
+             data-github="@Model.About.Social.Github"
+             data-linkedin="@Model.About.Social.Linkedin"></div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <span></span>
+    </a>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-5">
+                <div class="about-photo-wrap reveal pop-in">
+                    @if (!string.IsNullOrEmpty(Model.About.Picture))
+                    {
+                        <img src="/@Model.About.Picture" alt="@Model.About.Name" class="about-photo" />
+                    }
+                    else
+                    {
+                        <div class="about-photo-placeholder">
+                            <span>@Model.About.Name.Split(' ').FirstOrDefault()?.FirstOrDefault()</span>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="about-content reveal pop-in">
+                    <h3>@Model.About.Name</h3>
+                    <p class="text-accent">@Model.About.Title</p>
+                    <p class="about-bio">@Model.About.Bio</p>
+                    @if (!string.IsNullOrEmpty(Model.About.Location))
+                    {
+                        <p class="about-meta"><i class="bi bi-geo-alt"></i> @Model.About.Location</p>
+                    }
+                    <div class="skills-wrap mt-4">
+                        <h5>Skills</h5>
+                        <div class="skills-list">
+                            @foreach (var skill in Model.About.Skills)
+                            {
+                                <span class="skill-badge">@skill</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="about-actions mt-4">
+                        <button class="btn btn-primary" id="btn-copy-email">Copy Email</button>
+                        @if (!string.IsNullOrEmpty(Model.About.Social.Github))
+                        {
+                            <a class="btn btn-outline-light ms-2" href="@Model.About.Social.Github" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.About.Social.Linkedin))
+                        {
+                            <a class="btn btn-outline-light ms-2" href="@Model.About.Social.Linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal">Selected work showcasing my technical skills and problem-solving approach.</p>
+        <div class="projects-grid">
+            @foreach (var p in Model.Projects)
+            {
+                <article class="project-card reveal pop-in"
+                         data-title="@p.Title"
+                         data-image="@p.ImageUrl"
+                         data-details="@p.Details"
+                         data-github="@p.GithubUrl"
+                         data-demo="@p.DemoUrl"
+                         data-tags="@string.Join(',', p.Tags)">
+                    <div class="project-image-wrap">
+                        @if (!string.IsNullOrEmpty(p.ImageUrl))
+                        {
+                            <img src="/@p.ImageUrl" alt="@p.Title" class="project-image" loading="lazy" />
+                        }
+                        else
+                        {
+                            <div class="project-image-fallback"></div>
+                        }
+                        <div class="project-overlay">
+                            <button type="button" class="btn btn-light btn-sm btn-project-details">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h5>@p.Title</h5>
+                        <p>@p.Description</p>
+                        <div class="project-tags">
+                            @foreach (var tag in p.Tags)
+                            {
+                                <span class="tag">@tag</span>
+                            }
+                        </div>
+                    </div>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="timeline">
+            @foreach (var e in Model.Education)
+            {
+                <div class="timeline-item reveal pop-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">@e.Year</span>
+                        <h5>@e.Degree</h5>
+                        <p class="timeline-institution">@e.Institution</p>
+                        <p>@e.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="section-subtitle reveal">Have a project in mind or want to connect? Send me a message.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="contact-form" class="contact-form reveal pop-in" data-endpoint="https://formsubmit.co/ajax/@Model.About.Email">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="contact-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contact-name" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="contact-email" class="form-label">Gmail Address</label>
+                            <input type="email" class="form-control" id="contact-email" name="email" placeholder="you@gmail.com" pattern="^[^@@\s]+@@gmail\.com$" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="contact-subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="contact-subject" name="subject" placeholder="Project inquiry" required />
+                        </div>
+                        <div class="col-12">
+                            <label for="contact-message" class="form-label">Message</label>
+                            <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New portfolio contact" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="d-none" />
+                        <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            <button type="button" class="btn btn-outline-light" id="btn-copy-contact-email">Copy My Email</button>
+                            <span id="contact-feedback" class="contact-feedback" role="status"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="projectModalImageWrap" class="modal-image-wrap mb-3"></div>
+                <p id="projectModalDetails"></p>
+                <div id="projectModalTags" class="project-tags"></div>
+            </div>
+            <div class="modal-footer">
+                <a id="projectModalGithub" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+                <a id="projectModalDemo" class="btn btn-outline-primary d-none" target="_blank" rel="noopener">Live Demo</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
